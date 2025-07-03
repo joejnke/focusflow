@@ -1,4 +1,5 @@
 import { CalendarDays, Target, Clock, CheckCircle, BarChart3, ArrowRight, ChevronDown } from "lucide-react";
+import WaitingListForm from "@/components/WaitingListForm";
 
 export default function Home() {
   return (
@@ -17,11 +18,11 @@ export default function Home() {
               Your weekly and daily productivity companion. Plan intentionally, 
               execute focused, and reflect meaningfully.
             </p>
+            
+            {/* Waiting List Signup Form */}
+            <WaitingListForm variant="hero" />
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center gap-2 group">
-                Get Started
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
               <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
                 Learn More
               </button>
@@ -187,19 +188,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Waiting List CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Productivity?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of focused individuals who have transformed their productivity with FocusFlow&apos;s proven planning and reflection system.
+            Join our waiting list to be the first to access FocusFlow when it launches. Get exclusive updates and early access.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200 flex items-center gap-2 mx-auto group">
-            Start Your Free Trial
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          
+          {/* Waiting List Form */}
+          <WaitingListForm variant="cta" />
+          
+          {/* Stats/Social Proof */}
+          <div className="mt-8 flex items-center justify-center gap-8 text-blue-100">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">500+</div>
+              <div className="text-sm">Early Members</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">Q1 2024</div>
+              <div className="text-sm">Expected Launch</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">Free</div>
+              <div className="text-sm">Forever Plan</div>
+            </div>
+          </div>
         </div>
       </section>
 
